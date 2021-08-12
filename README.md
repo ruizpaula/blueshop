@@ -1,7 +1,5 @@
 # Bootstrap 5 Admin Dashbaord Template
 
-# 👉 Subscribe to My Channel [💙❤️Youtube❤️💙](https://www.youtube.com/channel/UCpOHt5d6GG-mvo-_pU06rhQ?sub_confirmation=1)
-
 ---
 
 ## List of Components used in this Tutorial
