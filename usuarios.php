@@ -15,7 +15,7 @@ $usuario = "SELECT  usuario.nombre_usuario, usuario.nombre, usuario.apellido, us
     />
     <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>BlueShop</title>
+    <title>BlueShop Store</title>
   </head>
   <body>
     <!-- top navigation bar -->

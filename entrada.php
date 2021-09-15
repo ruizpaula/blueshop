@@ -176,7 +176,7 @@ $entrada = "SELECT factura_entrada.no_factura, factura_entrada.fecha, factura_en
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
-            <h4>Entradas</h4>
+            <h4>Entradas producto</h4>
           </div>
         </div>
         
