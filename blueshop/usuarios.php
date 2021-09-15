@@ -189,7 +189,68 @@ $usuario = "SELECT  usuario.nombre_usuario, usuario.nombre, usuario.apellido, us
               </div>
               <div class="card-body">
                 <div class="table-responsive">
-                <button type="button" class="btn btn-success data-bs-toggle="modal" data-bs-target="#exampleModal"z">Registrar Usuario</button>
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Registrar entrada</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Registrar Entrada</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                        <form method="post" >
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Nombre Usuario</label>
+                                <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Nombre </label>
+                                <input type="text" class="form-control" name="nombre" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Fecha de creacion</label>
+                                <input type="text" class="form-control" name="fecha">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Producto</label>
+                                <select name="producto" class="form-select">
+                                    <option value="1">Selecciona</option> 
+                                    <option value="144">Sueter</option>
+                                    <option value="133">Camisa</option>
+                                    <option value="155">Vestido</option>
+                                    <option value="166">Blusa</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Cantidad</label>
+                                <input type="text" class="form-control" name="cantidad">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Proveedor</label>
+                                <select name="proveedor" class="form-select">
+                                    <option value="1">Selecciona</option> 
+                                    <option value="59">Addidas</option>
+                                    <option value="85">Siksilk</option>
+                                    <option value="81">Calvin Klein</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Monto</label>
+                                <input type="text" class="form-control" placeholder="$$$"name="monto">
+                            </div>
+                            
+                          <input type="submit" value="Agregar" name="agregar" class="btn btn-primary">
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
   
                 <br><br>
                   <table
