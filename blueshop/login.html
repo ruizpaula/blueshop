@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+    <!--
+Ejemplo de formulario de login con Bootstrap
+Basado en:
+  Plantilla inicial de Bootstrap 4
+  @author parzibyte
+  Visita: parzibyte.me/blog
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,
+            shrink-to-fit=no">
+        <meta name="description" content="Formulario de login con Bootstrap">
+        <meta name="author" content="Parzibyte">
+        <title>Formulario de login con Bootstrap</title>
+        <!-- Cargar el CSS de Boostrap-->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+        <script>
+            function validate(form){
+            falla   = validaUser(form.usuario.value)
+            falla  += validaClave(form.clave.value)
+                 if (falla == "") return true
+                else {
+                    alert(falla); return false
+                }
+            }
+            function validaUser(field){
+            if (field == "") return "Por favor ingrese un nombre de usuario valido\n"
+                else if (field.length < 5) return "el nombre de usuario debe de tener minimo 5 caracteres\n"
+                else if (/[^a-zA-Z0-9_-]/.test(field)) return "solo se permiten caractares de la A-Z\n"
+                return ""
+            }
+            function validaClave(field)
+            {if (field == "") return "Debe ingresar la contraseña. \n " 
+                    else if (field.length < 6)
+                        return "La contraseña debe tener por lo menos seis caracteres. \n"
+                    else if (! /[a-z]/.test(field) &&
+                             ! /[A-Z]/.test(field) &&
+                             ! /[0-9]/.test(field))
+                        return "La contraseña requiere a-z, A-Z, 0-9. \n"
+                    return ""
+            }
+            </script>
+    </head>
+
+    <body>
+        <main role="main" class="container my-auto " >
+            <div class="row ">
+                <div id="login" class="col-lg-4 offset-lg-4 col-md-6 offset-md-3
+                    col-10 card " style="margin-top:130px;">
+                    <img class="img-fluid mx-auto d-block rounded"
+                        src="images/logo_pagina.PNG" />
+
+                    <form action="valida.php" method="post"  onsubmit="return validate(this)"">
+                        <br>
+                        <div class="form-group">
+                            <label for="correo"><span><i class="bi bi-person-circle"></i></span> Usuario </label>
+                            <input id="correo" name="usuario"
+                                class="form-control" type="email"
+                                placeholder="Correo electrónico">
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="correo"><span><i class="bi bi-person-badge-fill"></i></span> Rol</label>
+                            <select name="rol" id="" class="form-select">
+                                <option value="0">Selecciona rol</option>
+                                <option value="1">Administrador</option>
+                                <option value="3">Auxiliar de bodega</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="palabraSecreta"><span><i class="bi bi-lock"></i></span> Contraseña</label>
+                            <input id="palabraSecreta" name="clave"
+                                class="form-control" type="password"
+                                placeholder="Contraseña">
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-primary mb-2">
+                            Entrar
+                        </button>
+                        <br>
+                        <a href="#">Contraseña olvidada</a>
+                        <br><br>
+                    </form>
+                    <div class="alert alert-info" role="alert">
+                        <h4 class="alert-heading">Bienvenido </h4>
+                        <p> Para iniciar sesion : </p>
+                        <ul>
+                            <li>Ingresa tu correo </li>
+                            <li>Selecciona el rol que te corresponda</li>
+                            <li>Ingresa tu contraseña, recuerda!!!! debe ser menos de 5 caracteres, Puedes usar MAYUSCULAS o minusculas ademas, debes agregar por lo menos un numero </li>
+                        </ul>
+                        <hr>
+                        <p class="mb-0">Para mas informacion ingresa a <a href="·">Terminos y condiciones</a> </p>
+                      </div>
+                </div>
+            </div>
+        </main>
+    </body>
+
+</html>
